@@ -10,7 +10,4 @@ RUN usermod -u $UID www-data && groupmod -g $GID www-data
 
 EXPOSE 80
 
-COPY entrypoint.sh /
-RUN chmod +x entrypoint.sh
-
-CMD /entrypoint.sh && nginx -g "daemon off;"
+CMD nginx -g "daemon off;"
